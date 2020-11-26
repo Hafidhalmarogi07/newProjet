@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+	 <h1>Product List</h1>
+    <a href="/new">Create New Product</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>doc_type</th>
+                <th>id_platform</th>
+                <th>nama_platform</th>
+                <th>term_of_payment</th>
+               <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="product : ${listPercobaan}">
+                <td th:text="${product.id}">id</td>
+                <td th:text="${product.doc_type}">doc_type</td>
+                <td th:text="${product.id_platform}">id_platform</td>
+                <td th:text="${product.nama_platform}">nama_platform</td>
+                <td th:text="${product.term_of_payment}">term_of_payment</td>
+             <td>
+                    <a th:href="@{'/edit/'+ ${product.id}}">Edit</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a th:href="@{'/delete/' + ${product.id}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
