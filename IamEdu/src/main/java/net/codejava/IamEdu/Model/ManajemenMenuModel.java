@@ -22,31 +22,31 @@ public class ManajemenMenuModel {
 	private long id;
 
 	@Column(name = "nama_aplikasi", length = 30)
-    private String namaAplikasi;
+    private String nama_aplikasi;
 
     @Column(name = "path_folder", length = 100)
-    private String pathFolder;
+    private String path_folder;
 
     @Column(name = "nama_menu_us", length = 50, nullable = false)
-    private String namaMenuUs;
+    private String nama_menu_us;
 
     @Column(name = "nama_menu_kr", length = 50, nullable = false)
-    private String namaMenuKr;
+    private String nama_menu_kr;
 
     @Column(name = "nama_menu_jp", length = 50, nullable = false)
-    private String namaMenuJp;
+    private String nama_menu_jp;
 
     @Column(name = "nama_menu_cn", length = 50, nullable = false)
-    private String namaMenuCn;
+    private String nama_menu_cn;
 
     @Column(name = "kategori_menu", length = 10, nullable = false)
-    private String kategoriMenu;
+    private String kategori_menu;
 
     @Column(name = "url_menu")
-    private String urlMenu;
+    private String url_menu;
 
-    @Column(name = "aktif")
-    private int aktif;
+    @Column(name = "aktif", length = 10)
+    private String aktif;
 
     @Column(name = "keterangan", length = 200)
     private String keterangan;
@@ -57,24 +57,24 @@ public class ManajemenMenuModel {
     @CreationTimestamp
     @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
     @Column(name = "create_at")
-    private LocalDateTime createAt ;
+    private LocalDateTime create_at ;
 
     @UpdateTimestamp
     @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
     @Column(name = "modified_at")
-    private LocalDateTime modifiedAt ;
+    private LocalDateTime modified_at ;
 
     @Column(name = "create_by")
-    private String createBy;
+    private String create_by;
 
     @Column(name = "modified_by")
-    private String modifiedBy;
+    private String modified_by;
 
     @Column(name = "create_ip")
-    private  String createIp;
+    private  String create_ip;
 
     @Column(name = "modified_ip")
-    private  String modifiedIp;
+    private  String modified_ip;
     
     
 
@@ -91,75 +91,75 @@ public class ManajemenMenuModel {
 		this.id = id;
 	}
 
-	public String getNamaAplikasi() {
-		return namaAplikasi;
+	public String getNama_aplikasi() {
+		return nama_aplikasi;
 	}
 
-	public void setNamaAplikasi(String namaAplikasi) {
-		this.namaAplikasi = namaAplikasi;
+	public void setNama_aplikasi(String nama_aplikasi) {
+		this.nama_aplikasi = nama_aplikasi;
 	}
 
-	public String getPathFolder() {
-		return pathFolder;
+	public String getPath_folder() {
+		return path_folder;
 	}
 
-	public void setPathFolder(String pathFolder) {
-		this.pathFolder = pathFolder;
+	public void setPath_folder(String path_folder) {
+		this.path_folder = path_folder;
 	}
 
-	public String getNamaMenuUs() {
-		return namaMenuUs;
+	public String getNama_menu_us() {
+		return nama_menu_us;
 	}
 
-	public void setNamaMenuUs(String namaMenuUs) {
-		this.namaMenuUs = namaMenuUs;
+	public void setNama_menu_us(String nama_menu_us) {
+		this.nama_menu_us = nama_menu_us;
 	}
 
-	public String getNamaMenuKr() {
-		return namaMenuKr;
+	public String getNama_menu_kr() {
+		return nama_menu_kr;
 	}
 
-	public void setNamaMenuKr(String namaMenuKr) {
-		this.namaMenuKr = namaMenuKr;
+	public void setNama_menu_kr(String nama_menu_kr) {
+		this.nama_menu_kr = nama_menu_kr;
 	}
 
-	public String getNamaMenuJp() {
-		return namaMenuJp;
+	public String getNama_menu_jp() {
+		return nama_menu_jp;
 	}
 
-	public void setNamaMenuJp(String namaMenuJp) {
-		this.namaMenuJp = namaMenuJp;
+	public void setNama_menu_jp(String nama_menu_jp) {
+		this.nama_menu_jp = nama_menu_jp;
 	}
 
-	public String getNamaMenuCn() {
-		return namaMenuCn;
+	public String getNama_menu_cn() {
+		return nama_menu_cn;
 	}
 
-	public void setNamaMenuCn(String namaMenuCn) {
-		this.namaMenuCn = namaMenuCn;
+	public void setNama_menu_cn(String nama_menu_cn) {
+		this.nama_menu_cn = nama_menu_cn;
 	}
 
-	public String getKategoriMenu() {
-		return kategoriMenu;
+	public String getKategori_menu() {
+		return kategori_menu;
 	}
 
-	public void setKategoriMenu(String kategoriMenu) {
-		this.kategoriMenu = kategoriMenu;
+	public void setKategori_menu(String kategori_menu) {
+		this.kategori_menu = kategori_menu;
 	}
 
-	public String getUrlMenu() {
-		return urlMenu;
+	public String getUrl_menu() {
+		return url_menu;
 	}
 
-	public void setUrlMenu(String urlMenu) {
-		this.urlMenu = urlMenu;
+	public void setUrl_menu(String url_menu) {
+		this.url_menu = url_menu;
 	}
 
-	public int getAktif() {
+	public String getAktif() {
 		return aktif;
 	}
 
-	public void setAktif(int aktif) {
+	public void setAktif(String aktif) {
 		this.aktif = aktif;
 	}
 
@@ -179,53 +179,55 @@ public class ManajemenMenuModel {
 		this.status = status;
 	}
 
-	public LocalDateTime getCreateAt() {
-		return createAt;
+	public LocalDateTime getCreate_at() {
+		return create_at;
 	}
 
-	public void setCreateAt(LocalDateTime createAt) {
-		this.createAt = createAt;
+	public void setCreate_at(LocalDateTime create_at) {
+		this.create_at = create_at;
 	}
 
-	public LocalDateTime getModifiedAt() {
-		return modifiedAt;
+	public LocalDateTime getModified_at() {
+		return modified_at;
 	}
 
-	public void setModifiedAt(LocalDateTime modifiedAt) {
-		this.modifiedAt = modifiedAt;
+	public void setModified_at(LocalDateTime modified_at) {
+		this.modified_at = modified_at;
 	}
 
-	public String getCreateBy() {
-		return createBy;
+	public String getCreate_by() {
+		return create_by;
 	}
 
-	public void setCreateBy(String createBy) {
-		this.createBy = createBy;
+	public void setCreate_by(String create_by) {
+		this.create_by = create_by;
 	}
 
-	public String getModifiedBy() {
-		return modifiedBy;
+	public String getModified_by() {
+		return modified_by;
 	}
 
-	public void setModifiedBy(String modifiedBy) {
-		this.modifiedBy = modifiedBy;
+	public void setModified_by(String modified_by) {
+		this.modified_by = modified_by;
 	}
 
-	public String getCreateIp() {
-		return createIp;
+	public String getCreate_ip() {
+		return create_ip;
 	}
 
-	public void setCreateIp(String createIp) {
-		this.createIp = createIp;
+	public void setCreate_ip(String create_ip) {
+		this.create_ip = create_ip;
 	}
 
-	public String getModifiedIp() {
-		return modifiedIp;
+	public String getModified_ip() {
+		return modified_ip;
 	}
 
-	public void setModifiedIp(String modifiedIp) {
-		this.modifiedIp = modifiedIp;
+	public void setModified_ip(String modified_ip) {
+		this.modified_ip = modified_ip;
 	}
+
+	
     
     
 }

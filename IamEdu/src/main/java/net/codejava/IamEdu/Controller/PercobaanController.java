@@ -15,17 +15,18 @@ import net.codejava.IamEdu.Model.TabelPercobaan;
 import net.codejava.IamEdu.Service.PercobaanService;
 
 @Controller
+@RequestMapping("IamEdu")
 public class PercobaanController {
 
 	@Autowired
 	private PercobaanService perService;
 	
-	@RequestMapping("/")
+	@RequestMapping(value = {"/",""})
 	public String ViewHome(Model model) {
 		List<TabelPercobaan> listPercobaan=perService.listAll();
 		model.addAttribute("listPercobaan", listPercobaan);
 		
-		return "frame";
+		return "index";
 			
 		
 	}

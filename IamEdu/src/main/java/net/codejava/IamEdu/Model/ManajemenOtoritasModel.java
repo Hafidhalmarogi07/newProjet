@@ -23,19 +23,19 @@ public class ManajemenOtoritasModel {
 		private long id;
 
 	    @Column(name = "nama_otoritas", length = 15)
-	    private String namaOtoritas;
+	    private String nama_otoritas;
 
 	    @Column(name = "pemutaran_vidio", length = 50)
-	    private String pemutaranVidio;
+	    private String pemutaran_vidio;
 
 	    @Column(name = "menu_awal", length = 50)
-	    private String menuAwal;
+	    private String menu_awal;
 
 	    @Column(name = "deskripsi")
 	    private String deskripsi;
 
 	    @Column(name = "jumlah_pengguna", length = 50)
-	    private int jumlahPengguna;
+	    private int jumlah_pengguna;
 
 	    @Column(name = "privilage", length = 15)
 	    private String privilage;
@@ -47,24 +47,24 @@ public class ManajemenOtoritasModel {
 	    @CreationTimestamp
 	    @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
 	    @Column(name = "create_at")
-	    private LocalDateTime createAt ;
+	    private LocalDateTime create_at ;
 
 	    @UpdateTimestamp
 	    @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
 	    @Column(name = "modified_at")
-	    private LocalDateTime modifiedAt ;
+	    private LocalDateTime modified_at ;
 
 	    @Column(name = "create_by")
-	    private String createBy;
+	    private String create_by;
 
 	    @Column(name = "modified_by")
-	    private String modifiedBy;
+	    private String modified_by;
 
 	    @Column(name = "create_ip")
-	    private  String createIp;
+	    private  String create_ip;
 
 	    @Column(name = "modified_ip")
-	    private  String modifiedIp;
+	    private  String modified_ip;
 	    
 	    
 
@@ -80,28 +80,28 @@ public class ManajemenOtoritasModel {
 			this.id = id;
 		}
 
-		public String getNamaOtoritas() {
-			return namaOtoritas;
+		public String getNama_otoritas() {
+			return nama_otoritas;
 		}
 
-		public void setNamaOtoritas(String namaOtoritas) {
-			this.namaOtoritas = namaOtoritas;
+		public void setNama_otoritas(String nama_otoritas) {
+			this.nama_otoritas = nama_otoritas;
 		}
 
-		public String getPemutaranVidio() {
-			return pemutaranVidio;
+		public String getPemutaran_vidio() {
+			return pemutaran_vidio;
 		}
 
-		public void setPemutaranVidio(String pemutaranVidio) {
-			this.pemutaranVidio = pemutaranVidio;
+		public void setPemutaran_vidio(String pemutaran_vidio) {
+			this.pemutaran_vidio = pemutaran_vidio;
 		}
 
-		public String getMenuAwal() {
-			return menuAwal;
+		public String getMenu_awal() {
+			return menu_awal;
 		}
 
-		public void setMenuAwal(String menuAwal) {
-			this.menuAwal = menuAwal;
+		public void setMenu_awal(String menu_awal) {
+			this.menu_awal = menu_awal;
 		}
 
 		public String getDeskripsi() {
@@ -112,12 +112,12 @@ public class ManajemenOtoritasModel {
 			this.deskripsi = deskripsi;
 		}
 
-		public int getJumlahPengguna() {
-			return jumlahPengguna;
+		public int getJumlah_pengguna() {
+			return jumlah_pengguna;
 		}
 
-		public void setJumlahPengguna(int jumlahPengguna) {
-			this.jumlahPengguna = jumlahPengguna;
+		public void setJumlah_pengguna(int jumlah_pengguna) {
+			this.jumlah_pengguna = jumlah_pengguna;
 		}
 
 		public String getPrivilage() {
@@ -136,53 +136,55 @@ public class ManajemenOtoritasModel {
 			this.status = status;
 		}
 
-		public LocalDateTime getCreateAt() {
-			return createAt;
+		public LocalDateTime getCreate_at() {
+			return create_at;
 		}
 
-		public void setCreateAt(LocalDateTime createAt) {
-			this.createAt = createAt;
+		public void setCreate_at(LocalDateTime create_at) {
+			this.create_at = create_at;
 		}
 
-		public LocalDateTime getModifiedAt() {
-			return modifiedAt;
+		public LocalDateTime getModified_at() {
+			return modified_at;
 		}
 
-		public void setModifiedAt(LocalDateTime modifiedAt) {
-			this.modifiedAt = modifiedAt;
+		public void setModified_at(LocalDateTime modified_at) {
+			this.modified_at = modified_at;
 		}
 
-		public String getCreateBy() {
-			return createBy;
+		public String getCreate_by() {
+			return create_by;
 		}
 
-		public void setCreateBy(String createBy) {
-			this.createBy = createBy;
+		public void setCreate_by(String create_by) {
+			this.create_by = create_by;
 		}
 
-		public String getModifiedBy() {
-			return modifiedBy;
+		public String getModified_by() {
+			return modified_by;
 		}
 
-		public void setModifiedBy(String modifiedBy) {
-			this.modifiedBy = modifiedBy;
+		public void setModified_by(String modified_by) {
+			this.modified_by = modified_by;
 		}
 
-		public String getCreateIp() {
-			return createIp;
+		public String getCreate_ip() {
+			return create_ip;
 		}
 
-		public void setCreateIp(String createIp) {
-			this.createIp = createIp;
+		public void setCreate_ip(String create_ip) {
+			this.create_ip = create_ip;
 		}
 
-		public String getModifiedIp() {
-			return modifiedIp;
+		public String getModified_ip() {
+			return modified_ip;
 		}
 
-		public void setModifiedIp(String modifiedIp) {
-			this.modifiedIp = modifiedIp;
+		public void setModified_ip(String modified_ip) {
+			this.modified_ip = modified_ip;
 		}
+		
+		
 	    
 	    
 }

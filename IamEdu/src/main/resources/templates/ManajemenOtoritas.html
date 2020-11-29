@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 
     <head>
         <meta charset="utf-8" />
-        <title>Admin Dashboard </title>
+        <title>Manajemen Otoritas </title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="" name="author" />
@@ -13,10 +14,10 @@
         <!-- <link rel="shortcut icon" href="../assets/images/favicon.ico"> -->
 
         <!-- DataTables -->
-        <link th:src="@{/plugins/datatables/dataTables.bootstrap4.min.css}"  media="all" rel="stylesheet" type="text/css" />
-        <link th:src="@{/plugins/datatables/buttons.bootstrap4.min.css}"  media="all" rel="stylesheet" type="text/css" />
+        <link th:href="@{/plugins/datatables/dataTables.bootstrap4.min.css}"  media="all" rel="stylesheet" type="text/css" />
+        <link th:href="@{/plugins/datatables/buttons.bootstrap4.min.css}"  media="all" rel="stylesheet" type="text/css" />
         <!-- Responsive datatable examples -->
-        <link th:src="@{/plugins/datatables/responsive.bootstrap4.min.css}"  media="all" rel="stylesheet" type="text/css" /> 
+        <link th:href="@{/plugins/datatables/responsive.bootstrap4.min.css}"  media="all" rel="stylesheet" type="text/css" /> 
 
         <!-- App css -->
         <link th:href="@{/assets/css/bootstrap.min.css}"  media="all" rel="stylesheet" type="text/css" />
@@ -194,107 +195,72 @@
         <div class="page-wrapper">
             <!-- Page Content-->
             <div class="page-content">
-<!-- 
+
                 <div class="container-fluid">
-                    Page-Title
-                    <div class="row">
+                    <!-- Page-Title -->
+                    <div class="row" >
                         <div class="col-sm-12">
                             <div class="page-title-box">
                                 <div class="float-right">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Menu</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Group User</a></li>
                                        
                                     </ol>
                                 </div>
-                                <h4 class="page-title">Data Menu</h4>
-                            </div>end page-title-box
-                        </div>end col
+                                <h4 class="page-title">Manajemen Otoritas</h4>
+                            </div><!--end page-title-box-->
+                        </div><!--end col-->
                     </div>
-                    end page title end breadcrumb
+                    <!-- end page title end breadcrumb -->
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
     
                                     
-                                    <p class="text-muted mb-3">
-                                        <a href="../dashboard/add-menu.html" class="btn btn-gradient-primary px-2 py-2 "><i class="dripicons-plus"></i>Tambah Menu</a>
+                                     <p class="text-muted mb-3">                                       
+                                        <a href="ManajemenOtoritas/AddOtoritas" class="btn btn-gradient-primary px-2 py-2 "><i class="dripicons-plus"></i>Tambah Otoritas</a>
                                     </p>
+    
     
                                     <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                         <thead>
-                                        <tr>
-                                            <th>Menu</th>
-                                            <th>Menu Utama</th>
-                                            <th>Deskripsi</th>
-                                            <th>Status</th>
-                                            <th>Aksi</th>
-                                        </tr>
+                                            <tr>
+                                                <th>Nama Otoritas</th>
+                                                <th>Deskripsi</th>
+                                                <th>Jumlah pengguna</th>
+                                                <th>Privilage</th>
+                                                <th>Pemutasarn Vidio</th>
+                                                <th>Aksi</th>
+                                            </tr>
                                         </thead>
-    
-    
-                                        <tbody>
-                                        <tr>
-                                            <td>Blog</td>
-                                            <td></td>
-                                            <td>Blog atau artikel</td>
-                                            <td>Aktif</td>
-                                            <td>
-                                                <a href="#" class="btn btn-gradient-warning px-2 py-2 "><i class="ti-pencil"></i>Ubah</a>
-                                                <a href="#" class="btn btn-gradient-danger px-2 py-2 "><i class="ti-trash"></i>Hapus</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Materi</td>
-                                            <td></td>
-                                            <td>Materi pembelajaran</td>
-                                            <td>Aktif</td>
-                                            <td>
-                                                <a href="#" class="btn btn-gradient-warning px-2 py-2 "><i class="ti-pencil"></i>Ubah</a>
-                                                <a href="#" class="btn btn-gradient-danger px-2 py-2 "><i class="ti-trash"></i>Hapus</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tugas</td>
-                                            <td></td>
-                                            <td>Tugas - tugas dari materi yang diberikan</td>
-                                            <td>Aktif</td>
-                                            <td>
-                                                <a href="#" class="btn btn-gradient-warning px-2 py-2 "><i class="ti-pencil"></i>Ubah</a>
-                                                <a href="#" class="btn btn-gradient-danger px-2 py-2 "><i class="ti-trash"></i>Hapus</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ujian</td>
-                                            <td>Tugas</td>
-                                            <td>Tugas Ujian dari materi yang diberikan</td>
-                                            <td>Aktif</td>
-                                            <td>
-                                                <a href="#" class="btn btn-gradient-warning px-2 py-2 "><i class="ti-pencil"></i>Ubah</a>
-                                                <a href="#" class="btn btn-gradient-danger px-2 py-2 "><i class="ti-trash"></i>Hapus</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Konfigurasi Website</td>
-                                            <td></td>
-                                            <td>Konfigurasi website</td>
-                                            <td>Aktif</td>
-                                            <td>
-                                                <a href="#" class="btn btn-gradient-warning px-2 py-2 "><i class="ti-pencil"></i>Ubah</a>
-                                                <a href="#" class="btn btn-gradient-danger px-2 py-2 "><i class="ti-trash"></i>Hapus</a>
-                                            </td>
-                                        </tr>
-    
-                                        </tbody>
+                                         <tbody>
+                                         <tr th:each="Otoritas : ${listOtoritas}">
+							                <td th:text="${Otoritas.nama_otoritas}">nama_otoritas</td>
+							                <td th:text="${Otoritas.deskripsi}">deskripsi</td>
+							                <td th:text="${Otoritas.jumlah_pengguna}">jumlah_pengguna</td>
+							                <td th:text="${Otoritas.privilage}">privilage</td>
+							                <label th:switch="${Otoritas.pemutaran_vidio}"> 
+							                	<td th:case="Y" th:text="Ya">pemutaran_vidio</td>
+							                	<td th:case="N" th:text="Tidak">pemutaran_vidio</td>
+							                </label>
+							             	<td>
+							                    <a th:href="@{'ManajemenOtoritas/edit/'+ ${Otoritas.id}}" class="btn btn-gradient-warning px-2 py-2 "><i class="ti-pencil"></i>Ubah</a>
+							                    &nbsp;&nbsp;&nbsp;
+							                    <a th:href="@{'ManajemenOtoritas/delete/' + ${Otoritas.id}}" class="btn btn-gradient-danger px-2 py-2 "><i class="ti-trash"></i>Hapus</a>
+							                </td>
+							            </tr>
+                                </tbody>
+                                       
                                     </table>
     
                                 </div>
                             </div>
-                        </div> end col
-                    </div> end row -->
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
 
 
-                <!-- </div>container -->
+                </div><!-- container -->
 
                 <footer class="footer text-center text-sm-left">
                     &copy; 2020 Iamedu-Indoneisa <span class="text-muted d-none d-sm-inline-block float-right"></span>
@@ -303,9 +269,6 @@
             <!-- end page content -->
         </div>
         <!-- end page-wrapper -->
-
-        
-
 
         <!-- jQuery  -->
         <script th:src="@{/assets/js/jquery.min.js}"></script>

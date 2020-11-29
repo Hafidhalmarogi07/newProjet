@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Add Manajemen Menu </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- App favicon -->
+        <!-- <link rel="shortcut icon" th:href="@{/assets/images/favicon.ico"> -->
+
+        <!-- DataTables -->
+        <link th:href="@{/plugins/datatables/dataTables.bootstrap4.min.css}" rel="stylesheet" type="text/css" />
+        <link th:href="@{/plugins/datatables/buttons.bootstrap4.min.css}" rel="stylesheet" type="text/css" />
+        <!-- Responsive datatable examples -->
+        <link th:href="@{/plugins/datatables/responsive.bootstrap4.min.css}" rel="stylesheet" type="text/css" /> 
+
+        <!-- App css -->
+        <link th:href="@{/assets/css/bootstrap.min.css}" rel="stylesheet" type="text/css" />
+        <link th:href="@{/assets/css/jquery-ui.min.css}" rel="stylesheet">
+        <link th:href="@{/assets/css/icons.min.css}" rel="stylesheet" type="text/css" />
+        <link th:href="@{/assets/css/metisMenu.min.css}" rel="stylesheet" type="text/css" />
+        <link th:href="@{/assets/css/app.min.css}" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+        
+         <!-- Top Bar Start -->
+         <div class="topbar">
+
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <a href="dashboard/crm-index.html" class="logo">
+                    <span>
+                        <!-- <img src="assets/images/logo-sm.png" alt="logo-small" class="logo-sm"> -->
+                         <h3><b>IamEdu</b></h3>
+                    </span>
+                    <span>
+                        <!-- <img src="assets/images/logo.png" alt="logo-large" class="logo-lg logo-light">
+                        <img src="assets/images/logo-dark.png" alt="logo-large" class="logo-lg"> -->
+                    </span>
+                </a>
+            </div>
+            <!--end logo-->
+            <!-- Navbar -->
+            <nav class="navbar-custom">    
+                <ul class="list-unstyled topbar-nav float-right mb-0"> 
+                   
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/images/users/user-1.png" alt="profile-user" class="rounded-circle" /> 
+                            <span class="ml-1 nav-user-name hidden-sm">Admin <i class="mdi mdi-chevron-down"></i> </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#"><i class="ti-user text-muted mr-2"></i> Profile</a>
+<!--                            <a class="dropdown-item" href="#"><i class="ti-wallet text-muted mr-2"></i> My Wallet</a>
+                            <a class="dropdown-item" href="#"><i class="ti-settings text-muted mr-2"></i> Settings</a>
+                            <a class="dropdown-item" href="#"><i class="ti-lock text-muted mr-2"></i> Lock screen</a>-->
+                            <div class="dropdown-divider mb-0"></div>
+                            <a class="dropdown-item" href="#"><i class="ti-power-off text-muted mr-2"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul><!--end topbar-nav-->
+    
+                <ul class="list-unstyled topbar-nav mb-0">                        
+                    <li>
+                        <button class="nav-link button-menu-mobile waves-effect waves-light">
+                            <i class="ti-menu nav-icon"></i>
+                        </button>
+                    </li>
+                    
+                </ul>
+            </nav>
+            <!-- end navbar-->
+        </div>
+        <!-- Top Bar End -->
+
+        
+        <!-- Left Sidenav -->
+        <div class="left-sidenav">
+            <ul class="metismenu left-sidenav-menu">
+                <li>
+                    <a href="dashboard/analytics-index.html"><i class="ti-bar-chart"></i><span>Dashboard</span></a>
+                   
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);"><i class="ti-server"></i><span>Menejemen</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                    <ul class="nav-second-level" aria-expanded="false">
+                         <c:url var="ManajemenMenu" value="/dataManajemenMenu.htm"></c:url>
+                        <li class="nav-item"><a class="nav-link" href="${ManajemenMenu}"><i class="ti-control-record"></i>Menu</a></li>
+                         <c:url var="ManajemenOtoritas" value="/dataManajemenOtoritas.htm"></c:url>
+                        <li class="nav-item"><a class="nav-link" href="${ManajemenOtoritas}"><i class="ti-control-record"></i>Otoritas</a></li>
+                         <c:url var="ManajemenPengguna" value="/dataManajemenPengguna.htm"></c:url>
+                        <li class="nav-item"><a class="nav-link" href="${ManajemenPengguna}"><i class="ti-control-record"></i>Pengguna</a></li>
+                        
+                        
+                        <!-- <li class="nav-item"><a class="nav-link" href="dashboard/list-authority-menu.html"><i class="ti-control-record"></i>Otoritas menu</a></li> -->
+                    </ul>
+                </li>                      
+                <li class="nav-item"><a class="nav-link" href="dashboard/log-activity.html"><i class="ti-list"></i>Log Pengguna</a></li>
+            </ul>
+        </div>
+        <!-- end left-sidenav-->
+
+        <div class="page-wrapper">
+            <!-- Page Content-->
+            <div class="page-content">
+				<div class="container-fluid">
+                    <!-- Page-Title -->
+                    <div class="row ">
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <div class="float-right">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Menu</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Add Menu</a></li>
+                            
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">Tambah Menu</h4>
+                            </div><!--end page-title-box-->
+                        </div><!--end col-->
+                    </div>
+                    <!-- end page title end breadcrumb -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">        
+                                    <h4 class="mt-0 header-title">Isi form berikut sesuai dengan kolom yang tersedia</h4>
+                                    <p class="text-muted mb-3">Perhatikan tanda berikut <code class="highlighter-rouge">*</code>
+                                        kolom harus diisi dan tidak boleh kosong 
+                                    </p>
+                                    <form th:action="@{../save}" th:object="${manajemenMenu}" method="post">
+                                    <div class="row">
+                                        
+                                        <div class="col-lg-6">
+                                        	<div class="form-group row">
+                                               <label class="col-sm-5 col-form-label text-right">Id Menu</label>
+                                                <div class="col-sm-7">
+                                                    <input class="form-control" type="text" value="" id="example-text-input" th:field="*{id}" readonly="readonly">
+           
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                               <label class="col-sm-5 col-form-label text-right">Nama Aplikasi</label>
+                                                <div class="col-sm-7">
+                                                    <input class="form-control" type="text" value="" id="example-text-input" th:field="*{nama_aplikasi}">
+           
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="example-text-input" class="col-sm-5 col-form-label text-right">Nama Menu(US) <code class="highlighter-rouge">*</code></label>
+                                                <div class="col-sm-7">
+                                                    <input class="form-control" type="text" value="" id="example-text-input" th:field="*{nama_menu_us}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="example-text-input" class="col-sm-5 col-form-label text-right">Nama Menu(JP)</label>
+                                                <div class="col-sm-7">
+                                                    <input class="form-control" type="text" value="" id="example-text-input" th:field="*{nama_menu_jp}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                               <label class="col-sm-5 col-form-label text-right">Kategori Menu <code class="highlighter-rouge">*</code></label>
+                                                <div class="col-sm-7">
+                                                    <select class="custom-select" th:field="*{kategori_menu}">
+                                                        <option th:value="F">Folder</option>
+                                                        <option th:value="U">URL</option>                                                        
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="example-text-input" class="col-sm-5 col-form-label text-right">URL Menu</label>
+                                                <div class="col-sm-7">
+                                                    <input class="form-control" type="text" value="" id="example-text-input" th:field="*{url_menu}">
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label text-right">Path Folder</label>
+                                                <div class="col-sm-8">
+                                                    <select class="custom-select" th:field="*{path_folder}">
+                                                    	<option th:each="listFolder : ${ListFolder}" th:value="${listFolder.id}" th:text="${listFolder.nama_aplikasi}"></option>                                                      
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="example-text-input" class="col-sm-4 col-form-label text-right">Nama Menu(KR)</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" value="" id="example-text-input" th:field="*{nama_menu_kr}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="example-text-input" class="col-sm-4 col-form-label text-right">Nama Menu(CN)</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" value="" id="example-text-input" th:field="*{nama_menu_cn}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label text-right">Aktifkan <code class="highlighter-rouge">*</code></label>
+                                                <div class="col-sm-8">
+                                                    <select class="custom-select" th:field="*{aktif}">
+                                                        <option th:value="y">Ya</option>
+                                                        <option th:value="n">Tidak</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="example-text-input" class="col-sm-4 col-form-label text-right">Deskripsi menu</label>
+                                                <div class="col-sm-8">
+                                                   
+                                                    <textarea class="form-control" th:field="*{keterangan}"></textarea>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div> 
+                                   
+                                    <hr>
+                                    
+                                    <div class="row">
+                                        <div class="col-sm-12 text-right">
+                                            <button type="submit" class="btn btn-gradient-primary px-2 py-2"><i class="dripicons-plus"></i>Update Menu</button>
+                                        </div>
+                                    </div>
+                                     </form>
+                                </div><!--end card-body-->
+                            </div><!--end card-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+                </div><!-- container -->
+               
+
+                <footer class="footer text-center text-sm-left">
+                    &copy; 2020 Iamedu-Indoneisa <span class="text-muted d-none d-sm-inline-block float-right"></span>
+                </footer><!--end footer-->
+            </div>
+            <!-- end page content -->
+        </div>
+        <!-- end page-wrapper -->
+
+        
+
+
+        <!-- jQuery  -->
+        <script th:src="@{/assets/js/jquery.min.js}"></script>
+        <script th:src="@{/assets/js/jquery-ui.min.js}"></script>
+        <script th:src="@{/assets/js/bootstrap.bundle.min.js}"></script>
+        <script th:src="@{/assets/js/metismenu.min.js}"></script>
+        <script th:src="@{/assets/js/waves.js}"></script>
+        <script th:src="@{/assets/js/feather.min.js}"></script>
+        <script th:src="@{/assets/js/jquery.slimscroll.min.js}"></script>    
+        
+        <!-- Required datatable js -->
+        <script th:src="@{/plugins/datatables/jquery.dataTables.min.js}"></script>
+        <script th:src="@{/plugins/datatables/dataTables.bootstrap4.min.js}"></script>
+        <!-- Buttons examples -->
+        <script th:src="@{/plugins/datatables/dataTables.buttons.min.js}"></script>
+        <script th:src="@{/plugins/datatables/buttons.bootstrap4.min.js}"></script>
+        <script th:src="@{/plugins/datatables/jszip.min.js}"></script>
+        <script th:src="@{/plugins/datatables/pdfmake.min.js}"></script>
+        <script th:src="@{/plugins/datatables/vfs_fonts.js}"></script>
+        <script th:src="@{/plugins/datatables/buttons.html5.min.js}"></script>
+        <script th:src="@{/plugins/datatables/buttons.print.min.js}"></script>
+        <script th:src="@{/plugins/datatables/buttons.colVis.min.js}"></script>
+        <!-- Responsive examples -->
+        <script th:src="@{/plugins/datatables/dataTables.responsive.min.js}"></script>
+        <script th:src="@{/plugins/datatables/responsive.bootstrap4.min.js}"></script>
+        <script th:src="@{/assets/pages/jquery.datatable.init.js}"></script>
+
+        <!-- App js -->
+        <script th:src="@{/assets/js/app.js}"></script>
+        
+    </body>
+
+</html>
